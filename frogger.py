@@ -503,178 +503,178 @@ star_exists = False
 
 data_for_save = {"high_score": 0, "coins": 999, "miles": False, "christmas": False, "controls": "WASD", "music_on": True}
 
-with open("high_score.txt") as score_file:
+with open("CPT-Evan-Ryan-Shayan-Varant-main/high_score.txt") as score_file:
     data_for_save = json.load(score_file)
 
 # ---------------------------
 # Fonts and Writing
-my_text_font = pygame.font.Font("Fonts/font.ttf", 50)  # made a font
+my_text_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 50)  # made a font
 
-control_font = pygame.font.Font("Fonts/font.ttf", 30)  # volume label font
+control_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 30)  # volume label font
 control_text = control_font.render("Control settings", True, (255, 255, 255))  # actual text
 control_loc = control_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))  # location of text
 
-label_font = pygame.font.Font("Fonts/font.ttf", 36)  # Define font for the label
+label_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 36)  # Define font for the label
 label_text = label_font.render("Options", True, (255, 255, 255))  # Render the text surface
 label_rect = label_text.get_rect(center=(WIDTH // 2, HEIGHT // 8))  # Position the text
 
-volume_font = pygame.font.Font("Fonts/font.ttf", 30)  # volume label font
+volume_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 30)  # volume label font
 volume_text = volume_font.render("Volume", True, (255, 255, 255))  # actual text
 volume_loc = volume_text.get_rect(center=(WIDTH // 2, HEIGHT // 4))  # location of text
 
 menu_text = my_text_font.render("FROGGER", True, (255, 255, 255))
 text_rect = menu_text.get_rect(center=(WIDTH // 2, HEIGHT // 8))  # location of main menu
 
-leader_font = pygame.font.Font("Fonts/font.ttf", 50)
+leader_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 50)
 leaderlabel = leader_font.render(" Leaderboard", True, (255, 255, 255))
 leader_board_loc = leaderlabel.get_rect(center=(WIDTH // 2, 700))
 
-leader_font_options = pygame.font.Font("Fonts/font.ttf", 50)
+leader_font_options = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 50)
 leaderlabel_options = leader_font_options.render("Leaderboard", True, (255, 255, 255))
 leader_board_options_loc = leaderlabel.get_rect(center=(WIDTH // 2, HEIGHT // 8))
 
-high_score_font = pygame.font.Font("Fonts/font.ttf", 40)  # volume label font
+high_score_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 40)  # volume label font
 high_score = high_score_font.render(f"ME   --------- {data_for_save['high_score']}", 1, (255, 255, 0))
 
 # --------------------------------
 # Buttons
-button_image = pygame.image.load("Graphics/Home_screen/play_button.png")  # loading play button asset
+button_image = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/play_button.png")  # loading play button asset
 button_image = pygame.transform.scale(button_image, (500, 150))  # size of play button
 button_rect = button_image.get_rect(center=(WIDTH // 2, HEIGHT // 4))  # location of play button
 
-options_button = pygame.image.load("Graphics/Home_screen/Options_button.jpeg")  # loading option button setting
+options_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Options_button.jpeg")  # loading option button setting
 options_button = pygame.transform.scale(options_button, (70, 70))  # size of button
 options_button_rect = options_button.get_rect(center=(750, 700))  # Set location of options button
 
-back_button = pygame.image.load("Graphics/Home_screen/back-button2.png")  # back button loading asset
+back_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/back-button2.png")  # back button loading asset
 back_button = pygame.transform.scale(back_button, (100, 100))  # size of back button
 back_button_loc = back_button.get_rect(center=(100, 700))  # location of back button
 
-on_button = pygame.image.load("Graphics/Home_screen/Sound_On_button.png")  # loading sound on button
+on_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Sound_On_button.png")  # loading sound on button
 on_button = pygame.transform.scale(on_button, (100, 100))  # size of button
 on_button_loc = on_button.get_rect(center=(WIDTH // 2 - 75, HEIGHT // 3))  # loc of button
 
-off_button = pygame.image.load("Graphics/Home_screen/Sound_off_button.png")  # loading sound on button
+off_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Sound_off_button.png")  # loading sound on button
 off_button = pygame.transform.scale(off_button, (100, 100))  # size of button
 off_button_loc = off_button.get_rect(center=(WIDTH // 2 + 75, HEIGHT // 3))  # loc of button
 
-exit_button = pygame.image.load("Graphics/Home_screen/Exit_game.png")  # loading sound on button
+exit_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Exit_game.png")  # loading sound on button
 exit_button = pygame.transform.scale(exit_button, (500, 150))  # size of button
 exit_button_loc = exit_button.get_rect(center=(WIDTH // 2, 700))  # location of button
 
-arrow_button = pygame.image.load("Graphics/Home_screen/Arrow_keys_options.png")  # loading button asset
+arrow_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Arrow_keys_options.png")  # loading button asset
 arrow_button = pygame.transform.scale(arrow_button, (80, 80))  # size of button
 arrow_button_loc = arrow_button.get_rect(center=(WIDTH // 2 + 75, 450))
 
-wasd_button = pygame.image.load("Graphics/Home_screen/wasd.png")  # loading button asset
+wasd_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/wasd.png")  # loading button asset
 wasd_button = pygame.transform.scale(wasd_button, (80, 80))
 wasd_button_loc = wasd_button.get_rect(center=(WIDTH // 2 - 75, 450))
 
-restart_button = pygame.image.load("Graphics/Home_screen/Restart_button.png")
+restart_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Restart_button.png")
 restart_button = pygame.transform.scale(restart_button, (500, 150))  # size of button
 restart_button_loc = restart_button.get_rect(center=(WIDTH // 2, 700))  # loc of button
 
-shop_sign = pygame.image.load("Graphics/Home_screen/shop_button.png")
+shop_sign = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/shop_button.png")
 shop_sign = pygame.transform.scale(shop_sign, (500, 300))  # size of button
 shop_button_loc = shop_sign.get_rect(center=(WIDTH // 2, HEIGHT // 2))
 
-game_over_font = pygame.font.Font("Fonts/font.ttf", 36)  # Define font for the label
+game_over_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 36)  # Define font for the label
 game_over_text = game_over_font.render("Game_Over", True, (255, 255, 255))  # Render the text surface
 game_over_loc = game_over_text.get_rect(center=(400, 100))  # Position the text
 
-leader_button = pygame.image.load("Graphics/Game_assets/Leader_board.png")
+leader_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/Leader_board.png")
 leader_button = pygame.transform.scale(leader_button, (500, 400))  # size of button
 leader_button_loc = leader_button.get_rect(center=(WIDTH // 2, 700))  # loc of button
 
-main_menu_button = pygame.image.load("Graphics/Game_assets/return_main_menu.png")
+main_menu_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/return_main_menu.png")
 main_menu_button_image = pygame.transform.scale(main_menu_button, (400, 150))  # size of play button
 main_menu_rect = main_menu_button_image.get_rect(center=(400, 250))  # location of play button
 
-skin_font = pygame.font.Font("Fonts/font.ttf", 50)  # volume label font
+skin_font = pygame.font.Font("CPT-Evan-Ryan-Shayan-Varant-main/Fonts/font.ttf", 50)  # volume label font
 skin_text = skin_font.render("Skins", True, (255, 255, 255))  # actual text
 skin_loc = skin_text.get_rect(center=(WIDTH // 2, HEIGHT // 8))  # location of text
 
-pause_button = pygame.image.load("Graphics/Home_screen/Options_button.jpeg")  # loading options button settings
+pause_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Options_button.jpeg")  # loading options button settings
 pause_button = pygame.transform.scale(pause_button, (70, 70))  # size of button
 pause_button_rect = options_button.get_rect(center=(750, 100))  # Set location of options button
 
-restart_button = pygame.image.load("Graphics/Home_screen/Restart_button.png")
+restart_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/Restart_button.png")
 restart_button = pygame.transform.scale(restart_button, (300, 100))
 restart_button_loc = restart_button.get_rect(center=(WIDTH / 2, 700))
 
-double_button = pygame.image.load("Graphics/Game_assets/double_xp.png")
+double_button = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/double_xp.png")
 double_button = pygame.transform.scale(double_button, (100, 100))
 double_button_loc = double_button.get_rect(center=(WIDTH // 2, 600))
 
-coin_img = pygame.image.load("Graphics/Game_assets/coin_img.png")
+coin_img = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/coin_img.png")
 coin_img_trans = pygame.transform.scale(coin_img, (50, 50))
 
-player_icon_img = pygame.image.load("Graphics/Home_screen/player_icon.png")
+player_icon_img = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Home_screen/player_icon.png")
 player_icon_trans = pygame.transform.scale(player_icon_img, (100, 135))
 # ---------------------------
 # Loading Game Assets
-frog_char_img = pygame.image.load('Graphics/Game_assets/Frog_char.png')
+frog_char_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/Frog_char.png')
 frog_char_img_trans = pygame.transform.scale(frog_char_img, (box_size, box_size))
 
-car_1_img = pygame.image.load('Graphics/Cars and Logs/car_1.png')
+car_1_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/car_1.png')
 car_1_img_trans = pygame.transform.scale(car_1_img, (box_size, box_size))
 
-car_2_img = pygame.image.load('Graphics/Cars and Logs/car_2.png')
+car_2_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/car_2.png')
 car_2_img_trans = pygame.transform.scale(car_2_img, (box_size, box_size))
 
-car_3_img = pygame.image.load('Graphics/Cars and Logs/car_3.png')
+car_3_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/car_3.png')
 car_3_img_trans = pygame.transform.scale(car_3_img, (box_size, box_size))
 
-car_4_img = pygame.image.load('Graphics/Cars and Logs/car_4.png')
+car_4_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/car_4.png')
 car_4_img_trans = pygame.transform.scale(car_4_img, (box_size, box_size))
 
-car_5_img = pygame.image.load('Graphics/Cars and Logs/car_5.png')
+car_5_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/car_5.png')
 car_5_img_trans = pygame.transform.scale(car_5_img, (box_size * 2, box_size))
 
-log_1x2_img = pygame.image.load('Graphics/Cars and Logs/1X2 Log.png')
+log_1x2_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/1X2 Log.png')
 log_1x2_img_trans = pygame.transform.scale(log_1x2_img, (box_size * 2, box_size))
 
-log_1x3_img = pygame.image.load('Graphics/Cars and Logs/1X3 Log.png')
+log_1x3_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/1X3 Log.png')
 log_1x3_img_trans = pygame.transform.scale(log_1x3_img, (box_size * 3, box_size))
 
-log_1x4_img = pygame.image.load('Graphics/Cars and Logs/1X4 Log.png')
+log_1x4_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Cars and Logs/1X4 Log.png')
 log_1x4_img_trans = pygame.transform.scale(log_1x4_img, (box_size * 4, box_size))
 
-fly_img = pygame.image.load("Graphics/Game_assets/fly.png")
+fly_img = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/fly.png")
 fly_img_trans = pygame.transform.scale(fly_img, (box_size, box_size))
 
-star_char_img = pygame.image.load('Graphics/Game_assets/star.png')
+star_char_img = pygame.image.load('CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/star.png')
 star_char_img_trans = pygame.transform.scale(star_char_img, (box_size, box_size))
 
-death_animation_img = pygame.image.load("Graphics/Game_assets/death_animation.png")
+death_animation_img = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/death_animation.png")
 death_animation_img_trans = pygame.transform.scale(death_animation_img, (box_size, box_size))
 
-ground_img = pygame.image.load("Graphics/Game_assets/Ground.png")
+ground_img = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/Ground.png")
 ground_img_trans = pygame.transform.scale(ground_img, (WIDTH, box_size))
 
-road_img = pygame.image.load("Graphics/Game_assets/Road.png")
+road_img = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/Road.png")
 road_img_trans = pygame.transform.scale(road_img, (WIDTH, box_size * 6))
 
-water_img = pygame.image.load("Graphics/Game_assets/Water.png")
+water_img = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/Water.png")
 water_img_trans = pygame.transform.scale(water_img, (WIDTH, box_size))
 
-christmas_skin = pygame.image.load("Graphics/Game_assets/christmas_frog_skin.png")
+christmas_skin = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/christmas_frog_skin.png")
 christmas_skin = pygame.transform.scale(christmas_skin, (150, 150))
 christmas_skin_in_game = pygame.transform.scale(christmas_skin, (box_size, box_size))
 christmas_skin_loc = christmas_skin.get_rect(center=(WIDTH // 2, HEIGHT // 2))
 
-OG_skin = pygame.image.load("Graphics/Game_assets/Frog_char.png")
+OG_skin = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/Frog_char.png")
 OG_skin = pygame.transform.scale(OG_skin, (150, 150))
 OG_skin_loc = OG_skin.get_rect(center=(150, HEIGHT // 2))
 
-miles_skin = pygame.image.load("Graphics/Game_assets/miles_morales_frog.png")
+miles_skin = pygame.image.load("CPT-Evan-Ryan-Shayan-Varant-main/Graphics/Game_assets/miles_morales_frog.png")
 miles_skin = pygame.transform.scale(miles_skin, (150, 150))
 miles_skin_in_game = pygame.transform.scale(miles_skin, (box_size, box_size))
 miles_skin_loc = OG_skin.get_rect(center=(WIDTH - 150, HEIGHT // 2))
 # ---------------------------------------
 # load music
 pygame.mixer.init()
-sound = pygame.mixer.Sound("Sounds/339124__zagi2__gaming-arcade-loop.wav")
+sound = pygame.mixer.Sound("CPT-Evan-Ryan-Shayan-Varant-main/Sounds/339124__zagi2__gaming-arcade-loop.wav")
 if data_for_save["music_on"]:
     sound.play(-1)
 current_frog = "og_skin"  # initial skin
